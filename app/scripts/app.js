@@ -10,6 +10,10 @@ angular.module('scholarshipSystemClientApp', [
       .when('/', {
         templateUrl: 'views/login.html',
         controller: 'LoginController'
+      }).
+      when('/register', {
+        templateUrl: 'views/register.html',
+        controller: 'RegisterController'
       })
       .otherwise({
         redirectTo: '/'
