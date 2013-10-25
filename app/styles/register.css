@@ -1,0 +1,12 @@
+#registerContainer {
+    margin-top: 50px;
+}
+
+form.register {
+    width: 500px;
+    max-width: 500px;
+}
+
+form input[type="text"], form input[type="password"] {
+    width: 460px;
+} 

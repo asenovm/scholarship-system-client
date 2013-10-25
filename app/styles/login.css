@@ -7,7 +7,7 @@ body {
     padding-bottom: 40px;
 }
 
-.form-signin {
+form {
     max-width: 300px;
     padding: 19px 29px 29px;
     margin: 0 auto 20px;
@@ -21,11 +21,11 @@ body {
     border: 1px solid rgba(0,0,0,0.2);
 }
 
-.form-signin .form-signin-heading, .form-signin .checkbox {
+form .form-heading, form .checkbox {
     margin-bottom: 10px;
 }
 
-.form-signin input[type="text"], .form-signin input[type="password"] {
+form input[type="text"], form input[type="password"] {
     font-size: 16px;
     height: auto;
     margin-bottom: 15px;
