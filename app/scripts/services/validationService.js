@@ -3,19 +3,20 @@
 angular.module('scholarshipSystemClientApp')
     .service('ValidationService', function () {
         
-        this.validateEmail = function (email) {
+        this.isValidEmail = function (email) {
             return /.+@.+\..+/.test(email);           
         };
 
-        this.validatePassword = function (password) {
+        this.isValidPassword = function (password) {
             return password.length >= 8 && password.search(/[A-Z]/) >= 0;       
         };
 
-        this.validateName = function (name) {
-            return /[a-zA-Z]+/.test(name);
+        this.isValidName = function (name) {
+            var match = name.match(/[a-zA-Z]+/);
+            return match && match[0] === name;
         };
 
-        this.validateFaculityId = function (id) {
+        this.isValidFacultyId = function (id) {
             return /[0-9]+/.test(id);
         };
     });

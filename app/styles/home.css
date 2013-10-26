@@ -1,0 +1,13 @@
+#homeContainer {
+    position: relative;
+    top: 100px;
+    margin: 0 auto;
+}
+
+#homeContainer table {
+    background-color: #e7e4d3;
+}
+
+#homeContainer table th {
+    background-color: #e5f2d9;
+}

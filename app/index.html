@@ -6,10 +6,11 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="styles/bootstrap.css">
-    <link rel="stylesheet" href="styles/login.css">
-    <link rel="stylesheet" href="styles/register.css">
+    <link rel="stylesheet" href="bower_components/bootstrap-sass/css/bootstrap-2.3.2.min.css"/>
     <link rel="stylesheet" href="bower_components/bootstrap-select/bootstrap-select.min.css">
+    <link rel="stylesheet" href="styles/login.css" />
+    <link rel="stylesheet" href="styles/register.css" />
+    <link rel="stylesheet" href="styles/home.css" />
 </head>
 <body ng-app="scholarshipSystemClientApp">
     <h2 class="text-center">Електронна система за кандидатстване за стипендии</h2>
@@ -42,6 +43,9 @@
     <!-- controllers -->
     <script src="scripts/controllers/login.js"></script>
     <script src="scripts/controllers/register.js"></script>
+    <script src="scripts/controllers/applicationForm.js"></script>
+
+    <!-- services -->
     <script src="scripts/services/validationService.js"></script>
 </body>
 </html>

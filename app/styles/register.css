@@ -10,3 +10,9 @@ form.register {
 .registerInput {
     width: 460px;
 }
+
+.feedbackIcon {
+    position: relative;
+    top: 50%;
+    margin-top: -4px;
+}
