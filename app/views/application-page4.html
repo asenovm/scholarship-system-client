@@ -2,17 +2,13 @@
     <form class="application">
         <h2 class="form-heading">Попълване на формуляр</h2>
         <input type="text" class="input-block-level registerInput" placeholder="Курс" ng-model="student.schoolYear"/>
-        <i class="icon-remove feedbackIcon" ng-show="!isValidFirstName()"></i>
-        <i class="icon-ok feedbackIcon" ng-show="isValidFirstName()"></i>
+        <i class="icon-remove feedbackIcon" ng-show="!isValidSchoolYear()"></i>
+        <i class="icon-ok feedbackIcon" ng-show="isValidSchoolYear()"></i>
         <input type="text" class="input-block-level registerInput" placeholder="Оценка" ng-model="student.grade"/>
-        <i class="icon-remove feedbackIcon" ng-show="!isValidSurname()"></i>
-        <i class="icon-ok feedbackIcon" ng-show="isValidSurname()"></i>
-        <input type="text" class="input-block-level registerInput" placeholder="Социална стипендия" ng-model="student.firstParentLastName"/>
-        <i class="icon-remove feedbackIcon" ng-show="!isValidLastName()"></i>
-        <i class="icon-ok feedbackIcon" ng-show="isValidLastName()"></i>
-        <input type="text" class="input-block-level registerInput" placeholder="Целогодишна стипендия" ng-model="student.firstParentCompany"/>
-        <i class="icon-remove feedbackIcon" ng-show="!isValidFacultyId()"></i>
-        <i class="icon-ok feedbackIcon" ng-show="isValidFacultyId()"></i>
+        <i class="icon-remove feedbackIcon" ng-show="!isValidGrade()"></i>
+        <i class="icon-ok feedbackIcon" ng-show="isValidGrade()"></i>
+        <input type="text" class="input-block-level registerInput" placeholder="Социална стипендия" ng-model="student.socialScholarship"/>
+        <input type="text" class="input-block-level registerInput" placeholder="Целогодишна стипендия" ng-model="student.wholeYear"/>
         <a class="btn btn-inverse" href="#application-page4">Продължи</a>
     </form>
     <div class="btn-toolbar">

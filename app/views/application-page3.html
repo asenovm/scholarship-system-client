@@ -1,21 +1,21 @@
 <div id="applicationContainer">
     <form class="application">
         <h2 class="form-heading">Попълване на формуляр</h2>
-        <input type="text" class="input-block-level registerInput" placeholder="Име на втори родител/настойник" ng-model="student.firstParentFirstName"/>
-        <i class="icon-remove feedbackIcon" ng-show="!isValidFirstName()"></i>
-        <i class="icon-ok feedbackIcon" ng-show="isValidFirstName()"></i>
-        <input type="text" class="input-block-level registerInput" placeholder="Презиме на втори родител/настойник" ng-model="student.firstParentSurname"/>
-        <i class="icon-remove feedbackIcon" ng-show="!isValidSurname()"></i>
-        <i class="icon-ok feedbackIcon" ng-show="isValidSurname()"></i>
-        <input type="text" class="input-block-level registerInput" placeholder="Фамилия на втори родител/настойник" ng-model="student.firstParentLastName"/>
-        <i class="icon-remove feedbackIcon" ng-show="!isValidLastName()"></i>
-        <i class="icon-ok feedbackIcon" ng-show="isValidLastName()"></i>
-        <input type="text" class="input-block-level registerInput" placeholder="Компания на втори родител/настойник" ng-model="student.firstParentCompany"/>
-        <i class="icon-remove feedbackIcon" ng-show="!isValidFacultyId()"></i>
-        <i class="icon-ok feedbackIcon" ng-show="isValidFacultyId()"></i>
-        <input type="text" class="input-block-level registerInput" placeholder="Доход за последните 6 месецa" ng-model="student.firstParentIncome"/>
-        <i class="icon-remove feedbackIcon" ng-show="!isValidEmail()"></i>
-        <i class="icon-ok feedbackIcon" ng-show="isValidEmail()"></i>
+        <input type="text" class="input-block-level registerInput" placeholder="Име на втори родител/настойник" ng-model="student.secondParentFirstName"/>
+        <i class="icon-remove feedbackIcon" ng-show="!isValidSecondParentFirstName()"></i>
+        <i class="icon-ok feedbackIcon" ng-show="isValidSecondParentFirstName()"></i>
+        <input type="text" class="input-block-level registerInput" placeholder="Презиме на втори родител/настойник" ng-model="student.secondParentSurname"/>
+        <i class="icon-remove feedbackIcon" ng-show="!isValidSecondParentSurname()"></i>
+        <i class="icon-ok feedbackIcon" ng-show="isValidSecondParentSurname()"></i>
+        <input type="text" class="input-block-level registerInput" placeholder="Фамилия на втори родител/настойник" ng-model="student.secondParentLastName"/>
+        <i class="icon-remove feedbackIcon" ng-show="!isValidSecondParentLastName()"></i>
+        <i class="icon-ok feedbackIcon" ng-show="isValidSecondParentLastName()"></i>
+        <input type="text" class="input-block-level registerInput" placeholder="Компания на втори родител/настойник" ng-model="student.secondParentCompany"/>
+        <i class="icon-remove feedbackIcon" ng-show="!isValidSecondParentCompanyName()"></i>
+        <i class="icon-ok feedbackIcon" ng-show="isValidSecondParentCompanyName()"></i>
+        <input type="text" class="input-block-level registerInput" placeholder="Доход за последните 6 месецa" ng-model="student.secondParentIncome"/>
+        <i class="icon-remove feedbackIcon" ng-show="!isValidSecondParentIncome()"></i>
+        <i class="icon-ok feedbackIcon" ng-show="isValidSecondParentIncome()"></i>
         <a class="btn btn-inverse" href="#application-page4">Продължи</a>
     </form>
     <div class="btn-toolbar">

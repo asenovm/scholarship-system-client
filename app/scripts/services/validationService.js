@@ -25,4 +25,13 @@ angular.module('scholarshipSystemClientApp')
             var match = income.match(/[0-9]+\.?[0-9]*/);
             return match && match[0] === income;
         };
+
+        this.isValidSchoolYear = function (year) {
+            return year in [1, 2, 3, 4];
+        }
+
+        this.isValidGrade = function (grade) {
+            var parsedGrade = parseFloat(grade, 10);
+            return parsedGrade >= 4.50 && parsedGrade <= 6;
+        }
     });
