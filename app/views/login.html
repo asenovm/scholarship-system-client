@@ -1,8 +1,8 @@
 <div class="loginContainer">
-    <form>
+    <form ng-submit="login()">
         <h2 class="form-heading">Вход</h2>
-        <input type="text" class="input-block-level" placeholder="e-mail адрес">
-        <input type="password" class="input-block-level" placeholder="парола">
+        <input type="text" class="input-block-level" placeholder="e-mail адрес" ng-model="credentials.email">
+        <input type="password" class="input-block-level" placeholder="парола" ng-model="credentials.password">
         <label class="checkbox">
             <input type="checkbox" value="remember-me"> Запомни ме
         </label>

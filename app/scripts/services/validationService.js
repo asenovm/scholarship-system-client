@@ -8,7 +8,7 @@ angular.module('scholarshipSystemClientApp')
         };
 
         this.isValidPassword = function (password) {
-            return password && password.length >= 8 && password.search(/[A-Z0-9]/) >= 0;
+            return password && password.length >= 8 && password.search(/[A-Z0-9]/) >= 0 && password.search(/\d/) >= 0;
         };
 
         this.isValidName = function (name) {

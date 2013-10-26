@@ -10,7 +10,7 @@ angular.module('scholarshipSystemClientApp')
             APPLICATION_URL = SERVER_URL + '/application',
             applicationData = {};
 
-        this.register = function(student) {
+        this.register = function (student) {
             console.log('register is called with ');
             console.dir(student);
             $http.post(REGISTER_URL, student)
@@ -21,6 +21,16 @@ angular.module('scholarshipSystemClientApp')
                     console.log('error');
                     console.dir(response);
                 });
+        };
+
+        this.login = function (credentials) {
+            $http.post(LOGIN_URL, JSON.stringify(credentials)).then(function (response) {
+                console.log('success');
+                console.dir(response);
+            }, function(response) {
+                console.log('error');
+                console.dir(response);
+            });
         };
 
         this.sendApplication = function () {
