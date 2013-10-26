@@ -37,7 +37,7 @@ angular.module('scholarshipSystemClientApp')
 
     $scope.next = function (page) {
         httpService.addApplicationData($scope.application);  
-        $location.path('/application-page' + page);
+        $location.path('/application-page-' + page);
     };
 
     $scope.sendApplication = function () { 
