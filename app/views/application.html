@@ -1,21 +1,16 @@
 <div id="applicationContainer">
     <form class="application">
         <h2 class="form-heading">Попълване на формуляр</h2>
-        <input type="text" class="input-block-level registerInput" placeholder="Име" ng-model="student.firstName"/>
-        <i class="icon-remove feedbackIcon" ng-show="!isValidFirstName()"></i>
-        <i class="icon-ok feedbackIcon" ng-show="isValidFirstName()"></i>
-        <input type="text" class="input-block-level registerInput" placeholder="Презиме" ng-model="student.surname"/>
-        <i class="icon-remove feedbackIcon" ng-show="!isValidSurname()"></i>
-        <i class="icon-ok feedbackIcon" ng-show="isValidSurname()"></i>
-        <input type="text" class="input-block-level registerInput" placeholder="Фамилия" ng-model="student.lastName"/>
-        <i class="icon-remove feedbackIcon" ng-show="!isValidLastName()"></i>
-        <i class="icon-ok feedbackIcon" ng-show="isValidLastName()"></i>
-        <input type="text" class="input-block-level registerInput" placeholder="Факултетен номер" ng-model="student.facultyId"/>
-        <i class="icon-remove feedbackIcon" ng-show="!isValidFacultyId()"></i>
-        <i class="icon-ok feedbackIcon" ng-show="isValidFacultyId()"></i>
-        <input type="text" class="input-block-level registerInput" placeholder="e-mail адрес" ng-model="student.email"/>
-        <i class="icon-remove feedbackIcon" ng-show="!isValidEmail()"></i>
-        <i class="icon-ok feedbackIcon" ng-show="isValidEmail()"></i>
+        <input type="text" class="input-block-level registerInput" placeholder="Име" value="Мартин" required/>
+        <i class="icon-ok feedbackIcon"></i>
+        <input type="text" class="input-block-level registerInput" placeholder="Презиме" value="Асенов" required/>
+        <i class="icon-ok feedbackIcon"></i>
+        <input type="text" class="input-block-level registerInput" placeholder="Фамилия" value="Асенов" required/>
+        <i class="icon-ok feedbackIcon"></i>
+        <input type="text" class="input-block-level registerInput" placeholder="Факултетен номер" value="80457" required/>
+        <i class="icon-ok feedbackIcon"></i>
+        <input type="text" class="input-block-level registerInput" placeholder="e-mail адрес" value="asenov.m@gmail.com" required/>
+        <i class="icon-ok feedbackIcon"></i>
         <a class="btn btn-inverse" href="#application-page2">Продължи</a>
     </form>
     <div class="btn-toolbar">

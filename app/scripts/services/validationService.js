@@ -12,7 +12,7 @@ angular.module('scholarshipSystemClientApp')
         };
 
         this.isValidName = function (name) {
-            var match = name.match(/[a-zA-Z]+/);
+            var match = name.match(/[АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя]+/);
             return match && match[0] === name;
         };
 
