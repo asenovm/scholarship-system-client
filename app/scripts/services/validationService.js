@@ -27,7 +27,8 @@ angular.module('scholarshipSystemClientApp')
         };
 
         this.isValidSchoolYear = function (year) {
-            return year in [1, 2, 3, 4];
+            var parsedYear = parseInt(year, 10);
+            return [1,2,3,4].indexOf(parsedYear) >= 0;
         }
 
         this.isValidGrade = function (grade) {

@@ -7,8 +7,14 @@
         <input type="text" class="input-block-level registerInput" placeholder="Оценка" ng-model="student.grade"/>
         <i class="icon-remove feedbackIcon" ng-show="!isValidGrade()"></i>
         <i class="icon-ok feedbackIcon" ng-show="isValidGrade()"></i>
-        <input type="text" class="input-block-level registerInput" placeholder="Социална стипендия" ng-model="student.socialScholarship"/>
-        <input type="text" class="input-block-level registerInput" placeholder="Целогодишна стипендия" ng-model="student.wholeYear"/>
+        <div id="checkboxContainer">
+            <label class="checkbox applicationCheckbox">
+                <input type="checkbox"> Социална стипендия
+            </label>
+            <label class="checkbox applicationCheckbox">
+                <input type="checkbox"> Целогодишна стипендия
+            </label>
+        </div>
         <a class="btn btn-inverse" href="#application-page4">Продължи</a>
     </form>
     <div class="btn-toolbar">
