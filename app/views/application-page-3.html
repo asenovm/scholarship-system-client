@@ -14,8 +14,8 @@
         <i class="icon-remove feedbackIcon" ng-show="!isValidName('secondParentCompanyName')"></i>
         <i class="icon-ok feedbackIcon" ng-show="isValidName('secondParentCompanyName')"></i>
         <input type="text" class="input-block-level registerInput" placeholder="Доход за последните 6 месецa" ng-model="application.secondParentIncome"/>
-        <i class="icon-remove feedbackIcon" ng-show="!isValidSecondParentIncome()"></i>
-        <i class="icon-ok feedbackIcon" ng-show="isValidSecondParentIncome()"></i>
+        <i class="icon-remove feedbackIcon" ng-show="!isValidIncome('secondParentIncome')"></i>
+        <i class="icon-ok feedbackIcon" ng-show="isValidIncome('secondParentIncome')"></i>
         <a class="btn btn-inverse" ng-click="next(4)">Продължи</a>
     </form>
     <div class="btn-toolbar">

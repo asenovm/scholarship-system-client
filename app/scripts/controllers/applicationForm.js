@@ -11,21 +11,14 @@ angular.module('scholarshipSystemClientApp')
         'email': 'asenov.m@gmail.com'
     };
 
-    function isValidIncome(income) {
-        return income && validationService.isValidIncome(income);
-    }
 
     $scope.isValidName = function (nameType) {
         return validationService.isValidName($scope.application[nameType]);
     }
-
-    $scope.isValidFirstParentIncome = function () {
-        return isValidIncome($scope.application.firstParentIncome);
-    };
-
-    $scope.isValidSecondParentIncome = function () {
-        return isValidIncome($scope.application.secondParentIncome);
-    };
+    $scope.isValidIncome = function (incomeType) {
+        var income = $scope.application[incomeType];
+        return income && validationService.isValidIncome(income);
+    }
 
     $scope.isValidSchoolYear = function () {
         return validationService.isValidSchoolYear($scope.application.schoolYear);
