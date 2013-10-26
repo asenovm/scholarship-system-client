@@ -7,33 +7,18 @@ angular.module('scholarshipSystemClientApp')
         dropupAuto: false
     });
 
-    function isValidName(name) {
-        return validationService.isValidName(name);
-    }
-
     $scope.register = function () {
         $scope.student.facultyName = $('.selectpicker').val();
         httpService.register($scope.student);
     };
 
-    $scope.isValidMajor = function () {
-        return $scope.student && isValidName($scope.student.major);
-    };
-
-    $scope.isValidFirstName = function () {
-        var student = $scope.student;
-        return student && isValidName(student.firstName);
-    };
-
-    $scope.isValidSurname = function () {
-        var student = $scope.student;
-        return student && isValidName(student.surname);
-    };
-
-    $scope.isValidLastName = function () {
-        var student = $scope.student;
-        return student && isValidName(student.lastName);
-    };
+    $scope.isValidName = function (nameType) {
+        if($scope.student) {
+            console.log('name type is ' + $scope.student[nameType]);
+        }
+        console.log('value is ' + ($scope.student && validationService.isValidName($scope.student[nameType])));
+        return $scope.student && validationService.isValidName($scope.student[nameType]);
+    }
 
     $scope.isValidFacultyId = function () {
         var student = $scope.student;

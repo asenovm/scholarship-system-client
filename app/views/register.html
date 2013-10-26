@@ -2,14 +2,14 @@
     <form class="register" ng-submit="register()">
         <h2 class="form-heading">Регистрация</h2>
         <input type="text" class="input-block-level registerInput" placeholder="Име" ng-model="student.firstName"/>
-        <i class="icon-remove feedbackIcon" ng-show="!isValidFirstName()"></i>
-        <i class="icon-ok feedbackIcon" ng-show="isValidFirstName()"></i>
+        <i class="icon-remove feedbackIcon" ng-show="!isValidName('firstName')"></i>
+        <i class="icon-ok feedbackIcon" ng-show="isValidName('firstName')"></i>
         <input type="text" class="input-block-level registerInput" placeholder="Презиме" ng-model="student.surname"/>
-        <i class="icon-remove feedbackIcon" ng-show="!isValidSurname()"></i>
-        <i class="icon-ok feedbackIcon" ng-show="isValidSurname()"></i>
+        <i class="icon-remove feedbackIcon" ng-show="!isValidName('surname')"></i>
+        <i class="icon-ok feedbackIcon" ng-show="isValidName('surname')"></i>
         <input type="text" class="input-block-level registerInput" placeholder="Фамилия" ng-model="student.lastName"/>
-        <i class="icon-remove feedbackIcon" ng-show="!isValidLastName()"></i>
-        <i class="icon-ok feedbackIcon" ng-show="isValidLastName()"></i>
+        <i class="icon-remove feedbackIcon" ng-show="!isValidName('lastName')"></i>
+        <i class="icon-ok feedbackIcon" ng-show="isValidName('lastName')"></i>
         <input type="text" class="input-block-level registerInput" placeholder="Факултетен номер" ng-model="student.facultyId"/>
         <i class="icon-remove feedbackIcon" ng-show="!isValidFacultyId()"></i>
         <i class="icon-ok feedbackIcon" ng-show="isValidFacultyId()"></i>
@@ -20,8 +20,8 @@
         <i class="icon-remove feedbackIcon" ng-show="!isValidPassword()"></i>
         <i class="icon-ok feedbackIcon" ng-show="isValidPassword()"></i>
         <input type="text" class="input-block-level registerInput" placeholder="специалност" ng-model="student.major"/>
-        <i class="icon-remove feedbackIcon" ng-show="!isValidMajor()"></i>
-        <i class="icon-ok feedbackIcon" ng-show="isValidMajor()"></i>
+        <i class="icon-remove feedbackIcon" ng-show="!isValidName('major')"></i>
+        <i class="icon-ok feedbackIcon" ng-show="isValidName('major')"></i>
         <select class="selectpicker">
             <option>Факултет по математика и информатика</option>
             <option>Факултет по физика</option>
