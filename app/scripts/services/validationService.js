@@ -4,11 +4,11 @@ angular.module('scholarshipSystemClientApp')
     .service('ValidationService', function () {
         
         this.isValidEmail = function (email) {
-            return /.+@.+\..+/.test(email);           
+            return /.+@.+\..+/.test(email);
         };
 
         this.isValidPassword = function (password) {
-            return password.length >= 8 && password.search(/[A-Z]/) >= 0;       
+            return password.length >= 8 && password.search(/[A-Z0-9]/) >= 0;
         };
 
         this.isValidName = function (name) {

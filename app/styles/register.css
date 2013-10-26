@@ -1,8 +1,8 @@
-#registerContainer {
+#registerContainer, #applicationContainer {
     margin-top: 50px;
 }
 
-form.register {
+form.register, form.application {
     width: 500px;
     max-width: 500px;
 }
