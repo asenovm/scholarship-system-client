@@ -24,6 +24,7 @@ angular.module('scholarshipSystemClientApp')
             if(!id) {
                 return false;
             }
+
             var match = id.match(/[0-9]+/);
             return match && match[0] === id;
         };
@@ -32,6 +33,7 @@ angular.module('scholarshipSystemClientApp')
             if(!income) {
                 return false;
             }
+
             var match = income.match(/[0-9]+\.?[0-9]*/);
             return match && match[0] === income;
         };

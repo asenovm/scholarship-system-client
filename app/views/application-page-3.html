@@ -2,17 +2,17 @@
     <form class="application">
         <h2 class="form-heading">Попълване на формуляр</h2>
         <input type="text" class="input-block-level registerInput" placeholder="Име на втори родител/настойник" ng-model="application.secondParentFirstName"/>
-        <i class="icon-remove feedbackIcon" ng-show="!isValidSecondParentFirstName()"></i>
-        <i class="icon-ok feedbackIcon" ng-show="isValidSecondParentFirstName()"></i>
+        <i class="icon-remove feedbackIcon" ng-show="!isValidName('secondParentFirstName')"></i>
+        <i class="icon-ok feedbackIcon" ng-show="isValidName('secondParentFirstName')"></i>
         <input type="text" class="input-block-level registerInput" placeholder="Презиме на втори родител/настойник" ng-model="application.secondParentSurname"/>
-        <i class="icon-remove feedbackIcon" ng-show="!isValidSecondParentSurname()"></i>
-        <i class="icon-ok feedbackIcon" ng-show="isValidSecondParentSurname()"></i>
+        <i class="icon-remove feedbackIcon" ng-show="!isValidName('secondParentSurname')"></i>
+        <i class="icon-ok feedbackIcon" ng-show="isValidName('secondParentSurname')"></i>
         <input type="text" class="input-block-level registerInput" placeholder="Фамилия на втори родител/настойник" ng-model="application.secondParentLastName"/>
-        <i class="icon-remove feedbackIcon" ng-show="!isValidSecondParentLastName()"></i>
-        <i class="icon-ok feedbackIcon" ng-show="isValidSecondParentLastName()"></i>
+        <i class="icon-remove feedbackIcon" ng-show="!isValidName('secondParentLastName')"></i>
+        <i class="icon-ok feedbackIcon" ng-show="isValidName('secondParentLastName')"></i>
         <input type="text" class="input-block-level registerInput" placeholder="Компания на втори родител/настойник" ng-model="application.secondParentCompany"/>
-        <i class="icon-remove feedbackIcon" ng-show="!isValidSecondParentCompanyName()"></i>
-        <i class="icon-ok feedbackIcon" ng-show="isValidSecondParentCompanyName()"></i>
+        <i class="icon-remove feedbackIcon" ng-show="!isValidName('secondParentCompanyName')"></i>
+        <i class="icon-ok feedbackIcon" ng-show="isValidName('secondParentCompanyName')"></i>
         <input type="text" class="input-block-level registerInput" placeholder="Доход за последните 6 месецa" ng-model="application.secondParentIncome"/>
         <i class="icon-remove feedbackIcon" ng-show="!isValidSecondParentIncome()"></i>
         <i class="icon-ok feedbackIcon" ng-show="isValidSecondParentIncome()"></i>
