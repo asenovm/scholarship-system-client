@@ -19,6 +19,9 @@
         <input type="password" class="input-block-level registerInput" placeholder="парола" ng-model="student.password"/>
         <i class="icon-remove feedbackIcon" ng-show="!isValidPassword()"></i>
         <i class="icon-ok feedbackIcon" ng-show="isValidPassword()"></i>
+        <input type="text" class="input-block-level registerInput" placeholder="специалност" ng-model="student.major"/>
+        <i class="icon-remove feedbackIcon" ng-show="!isValidMajor()"></i>
+        <i class="icon-ok feedbackIcon" ng-show="isValidMajor()"></i>
         <select class="selectpicker">
             <option>Факултет по математика и информатика</option>
             <option>Факултет по физика</option>

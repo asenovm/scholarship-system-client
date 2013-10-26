@@ -13,11 +13,13 @@ angular.module('scholarshipSystemClientApp')
         this.register = function(student) {
             console.log('register is called with ');
             console.dir(student);
-            $http({ withCredentials: true}).post(REGISTER_URL, student)
+            $http.post(REGISTER_URL, student)
                 .success(function (response) {
                     console.log('success');
+                    console.dir(response);
                 }).error(function (response) {
                     console.log('error');
+                    console.dir(response);
                 });
         };
 

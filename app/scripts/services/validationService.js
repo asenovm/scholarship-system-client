@@ -4,24 +4,34 @@ angular.module('scholarshipSystemClientApp')
     .service('ValidationService', function () {
         
         this.isValidEmail = function (email) {
-            return /.+@.+\..+/.test(email);
+            return email && /.+@.+\..+/.test(email);
         };
 
         this.isValidPassword = function (password) {
-            return password.length >= 8 && password.search(/[A-Z0-9]/) >= 0;
+            return password && password.length >= 8 && password.search(/[A-Z0-9]/) >= 0;
         };
 
         this.isValidName = function (name) {
+            if(!name) {
+                return false;
+            }
+
             var match = name.match(/[АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя]+/);
             return match && match[0] === name;
         };
 
         this.isValidFacultyId = function (id) {
+            if(!id) {
+                return false;
+            }
             var match = id.match(/[0-9]+/);
             return match && match[0] === id;
         };
 
         this.isValidIncome = function (income) {
+            if(!income) {
+                return false;
+            }
             var match = income.match(/[0-9]+\.?[0-9]*/);
             return match && match[0] === income;
         };

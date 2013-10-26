@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('scholarshipSystemClientApp')
-  .controller('RegisterController', ['$scope', '$location', 'ValidationService', function ($scope, $location, validationService) {
+  .controller('RegisterController', ['$scope', '$location', 'ValidationService', 'HttpService', function ($scope, $location, validationService, httpService) {
     $('.selectpicker').selectpicker({
         width: 460,
         dropupAuto: false
@@ -12,7 +12,12 @@ angular.module('scholarshipSystemClientApp')
     }
 
     $scope.register = function () {
-        $location.path('/home');
+        $scope.student.facultyName = $('.selectpicker').val();
+        httpService.register($scope.student);
+    };
+
+    $scope.isValidMajor = function () {
+        return $scope.student && isValidName($scope.student.major);
     };
 
     $scope.isValidFirstName = function () {
