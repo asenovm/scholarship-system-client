@@ -3,7 +3,7 @@
 angular.module('scholarshipSystemClientApp')
   .controller('ApplicationFormController', ['$scope', '$location', 'ValidationService', 'HttpService', function ($scope, $location, validationService, httpService) {
 
-    $scope.student = {
+    $scope.application = {
         'firstName': 'Martin',
         'lastName': 'Asenov',
         'surname': 'Asenov',
@@ -21,60 +21,60 @@ angular.module('scholarshipSystemClientApp')
 
     //TODO check how to call the function with params and quit this madness
     $scope.isValidFirstParentFirstName = function () {
-        return isValidName($scope.student.firstParentFirstName);
+        return isValidName($scope.application.firstParentFirstName);
     };
 
     $scope.isValidFirstParentSurname = function () {
-        return isValidName($scope.student.firstParentSurname);
+        return isValidName($scope.application.firstParentSurname);
     };
 
     $scope.isValidFirstParentLastName = function () {
-        return isValidName($scope.student.firstParentLastName);
+        return isValidName($scope.application.firstParentLastName);
     };
 
     $scope.isValidFirstParentCompanyName = function () {
-        return isValidName($scope.student.firstParentCompanyName);
+        return isValidName($scope.application.firstParentCompanyName);
     };
 
     $scope.isValidFirstParentIncome = function () {
-        return isValidIncome($scope.student.firstParentIncome);
+        return isValidIncome($scope.application.firstParentIncome);
     };
 
     $scope.isValidSecondParentFirstName = function () {
-        return isValidName($scope.student.secondParentFirstName);
+        return isValidName($scope.application.secondParentFirstName);
     }
 
     $scope.isValidSecondParentSurname = function () {
-        return isValidName($scope.student.secondParentSurname);
+        return isValidName($scope.application.secondParentSurname);
     };
 
     $scope.isValidSecondParentLastName = function () {
-        return isValidName($scope.student.secondParentLastName);
+        return isValidName($scope.application.secondParentLastName);
     };
 
     $scope.isValidSecondParentCompanyName = function () {
-        return isValidName($scope.student.secondParentCompanyName);
+        return isValidName($scope.application.secondParentCompanyName);
     };
 
     $scope.isValidSecondParentIncome = function () {
-        return isValidIncome($scope.student.secondParentIncome);
+        return isValidIncome($scope.application.secondParentIncome);
     };
 
     $scope.isValidSchoolYear = function () {
-        return validationService.isValidSchoolYear($scope.student.schoolYear);
+        return validationService.isValidSchoolYear($scope.application.schoolYear);
     };
 
     $scope.isValidGrade = function () {
-        return validationService.isValidGrade($scope.student.grade);
+        return validationService.isValidGrade($scope.application.grade);
     };
 
     $scope.next = function (page) {
-        httpService.addApplicationData($scope.student);  
+        httpService.addApplicationData($scope.application);  
         $location.path('/application-page' + page);
     };
 
     $scope.sendApplication = function () { 
-        httpService.addApplicationData($scope.student);
+        httpService.addApplicationData($scope.application);
         httpService.sendApplication();
     };
 

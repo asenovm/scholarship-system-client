@@ -24,15 +24,15 @@ angular.module('scholarshipSystemClientApp', [
         controller: 'ApplicationFormController'
       }).
       when('/application-page2', {
-        templateUrl: 'views/application-page2.html',
+        templateUrl: 'views/application-page-2.html',
         controller: 'ApplicationFormController'
       }).
       when('/application-page3', {
-        templateUrl: 'views/application-page3.html',
+        templateUrl: 'views/application-page-3.html',
         controller: 'ApplicationFormController'
       }).
       when('/application-page4', {
-        templateUrl: 'views/application-page4.html',
+        templateUrl: 'views/application-page-4.html',
         controller: 'ApplicationFormController'
       })
       .otherwise({

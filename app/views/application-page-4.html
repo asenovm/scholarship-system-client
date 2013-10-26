@@ -1,18 +1,18 @@
 <div id="applicationContainer">
     <form class="application" ng-controller="ApplicationFormController" ng-submit="sendApplication()">
         <h2 class="form-heading">Попълване на формуляр</h2>
-        <input type="text" class="input-block-level registerInput" placeholder="Курс" ng-model="student.schoolYear"/>
+        <input type="text" class="input-block-level registerInput" placeholder="Курс" ng-model="application.schoolYear"/>
         <i class="icon-remove feedbackIcon" ng-show="!isValidSchoolYear()"></i>
         <i class="icon-ok feedbackIcon" ng-show="isValidSchoolYear()"></i>
-        <input type="text" class="input-block-level registerInput" placeholder="Оценка" ng-model="student.grade"/>
+        <input type="text" class="input-block-level registerInput" placeholder="Оценка" ng-model="application.grade"/>
         <i class="icon-remove feedbackIcon" ng-show="!isValidGrade()"></i>
         <i class="icon-ok feedbackIcon" ng-show="isValidGrade()"></i>
         <div id="checkboxContainer">
             <label class="checkbox applicationCheckbox">
-                <input type="checkbox"> Социална стипендия
+                <input type="checkbox" ng-model="application.socialScholarship"> Социална стипендия
             </label>
             <label class="checkbox applicationCheckbox">
-                <input type="checkbox"> Целогодишна стипендия
+                <input type="checkbox" ng-model="application.wholeYearScholarship"> Целогодишна стипендия
             </label>
         </div>
         <button class="btn btn-inverse" type="submit">Запази</button>

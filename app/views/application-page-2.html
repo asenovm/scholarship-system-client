@@ -1,19 +1,19 @@
 <div id="applicationContainer">
     <form class="application">
         <h2 class="form-heading">Попълване на формуляр</h2>
-        <input type="text" class="input-block-level registerInput" placeholder="Име на първи родител/настойник" ng-model="student.firstParentFirstName"/>
+        <input type="text" class="input-block-level registerInput" placeholder="Име на първи родител/настойник" ng-model="application.firstParentFirstName"/>
         <i class="icon-remove feedbackIcon" ng-show="!isValidFirstParentFirstName()"></i>
         <i class="icon-ok feedbackIcon" ng-show="isValidFirstParentFirstName()"></i>
-        <input type="text" class="input-block-level registerInput" placeholder="Презиме на първи родител/настойник" ng-model="student.firstParentSurname"/>
+        <input type="text" class="input-block-level registerInput" placeholder="Презиме на първи родител/настойник" ng-model="application.firstParentSurname"/>
         <i class="icon-remove feedbackIcon" ng-show="!isValidFirstParentSurname()"></i>
         <i class="icon-ok feedbackIcon" ng-show="isValidFirstParentSurname()"></i>
-        <input type="text" class="input-block-level registerInput" placeholder="Фамилия на първи родител/настойник" ng-model="student.firstParentLastName"/>
+        <input type="text" class="input-block-level registerInput" placeholder="Фамилия на първи родител/настойник" ng-model="application.firstParentLastName"/>
         <i class="icon-remove feedbackIcon" ng-show="!isValidFirstParentLastName()"></i>
         <i class="icon-ok feedbackIcon" ng-show="isValidFirstParentLastName()"></i>
-        <input type="text" class="input-block-level registerInput" placeholder="Компания на първи родител/настойник" ng-model="student.firstParentCompanyName"/>
+        <input type="text" class="input-block-level registerInput" placeholder="Компания на първи родител/настойник" ng-model="application.firstParentCompanyName"/>
         <i class="icon-remove feedbackIcon" ng-show="!isValidFirstParentCompanyName()"></i>
         <i class="icon-ok feedbackIcon" ng-show="isValidFirstParentCompanyName()"></i>
-        <input type="text" class="input-block-level registerInput" placeholder="Доход за последните 6 месецa" ng-model="student.firstParentIncome"/>
+        <input type="text" class="input-block-level registerInput" placeholder="Доход за последните 6 месецa" ng-model="application.firstParentIncome"/>
         <i class="icon-remove feedbackIcon" ng-show="!isValidFirstParentIncome()"></i>
         <i class="icon-ok feedbackIcon" ng-show="isValidFirstParentIncome()"></i>
         <a class="btn btn-inverse" ng-click="next(3)">Продължи</a>
