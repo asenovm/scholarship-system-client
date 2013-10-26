@@ -1,5 +1,5 @@
 <div id="applicationContainer">
-    <form class="application" ng-submit="register()">
+    <form class="application">
         <h2 class="form-heading">Попълване на формуляр</h2>
         <input type="text" class="input-block-level registerInput" placeholder="Име" ng-model="student.firstName"/>
         <i class="icon-remove feedbackIcon" ng-show="!isValidFirstName()"></i>
@@ -16,10 +16,7 @@
         <input type="text" class="input-block-level registerInput" placeholder="e-mail адрес" ng-model="student.email"/>
         <i class="icon-remove feedbackIcon" ng-show="!isValidEmail()"></i>
         <i class="icon-ok feedbackIcon" ng-show="isValidEmail()"></i>
-        <input type="password" class="input-block-level registerInput" placeholder="парола" ng-model="student.password"/>
-        <i class="icon-remove feedbackIcon" ng-show="!isValidPassword()"></i>
-        <i class="icon-ok feedbackIcon" ng-show="isValidPassword()"></i>
-        <button class="btn btn-inverse" type="submit">Продължи</button>
+        <a class="btn btn-inverse" href="#application-page2">Продължи</a>
     </form>
     <div class="btn-toolbar">
 </div>

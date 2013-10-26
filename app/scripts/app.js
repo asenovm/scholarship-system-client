@@ -22,6 +22,18 @@ angular.module('scholarshipSystemClientApp', [
       when('/application', {
         templateUrl: 'views/application.html',
         controller: 'ApplicationFormController'
+      }).
+      when('/application-page2', {
+        templateUrl: 'views/application-page2.html',
+        controller: 'ApplicationFormController'
+      }).
+      when('/application-page3', {
+        templateUrl: 'views/application-page3.html',
+        controller: 'ApplicationFormController'
+      }).
+      when('/application-page4', {
+        templateUrl: 'views/application-page4.html',
+        controller: 'ApplicationFormController'
       })
       .otherwise({
         redirectTo: '/'

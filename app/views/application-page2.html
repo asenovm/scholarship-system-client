@@ -1,0 +1,23 @@
+<div id="applicationContainer">
+    <form class="application">
+        <h2 class="form-heading">Попълване на формуляр</h2>
+        <input type="text" class="input-block-level registerInput" placeholder="Име на първи родител/настойник" ng-model="student.firstParentFirstName"/>
+        <i class="icon-remove feedbackIcon" ng-show="!isValidFirstName()"></i>
+        <i class="icon-ok feedbackIcon" ng-show="isValidFirstName()"></i>
+        <input type="text" class="input-block-level registerInput" placeholder="Презиме на първи родител/настойник" ng-model="student.firstParentSurname"/>
+        <i class="icon-remove feedbackIcon" ng-show="!isValidSurname()"></i>
+        <i class="icon-ok feedbackIcon" ng-show="isValidSurname()"></i>
+        <input type="text" class="input-block-level registerInput" placeholder="Фамилия на първи родител/настойник" ng-model="student.firstParentLastName"/>
+        <i class="icon-remove feedbackIcon" ng-show="!isValidLastName()"></i>
+        <i class="icon-ok feedbackIcon" ng-show="isValidLastName()"></i>
+        <input type="text" class="input-block-level registerInput" placeholder="Компания на първи родител/настойник" ng-model="student.firstParentCompany"/>
+        <i class="icon-remove feedbackIcon" ng-show="!isValidFacultyId()"></i>
+        <i class="icon-ok feedbackIcon" ng-show="isValidFacultyId()"></i>
+        <input type="text" class="input-block-level registerInput" placeholder="Доход за последните 6 месецa" ng-model="student.firstParentIncome"/>
+        <i class="icon-remove feedbackIcon" ng-show="!isValidEmail()"></i>
+        <i class="icon-ok feedbackIcon" ng-show="isValidEmail()"></i>
+        <a class="btn btn-inverse" href="#application-page3">Продължи</a>
+    </form>
+    <div class="btn-toolbar">
+</div>
+</div>
