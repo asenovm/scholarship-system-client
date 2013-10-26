@@ -17,6 +17,12 @@ angular.module('scholarshipSystemClientApp')
         };
 
         this.isValidFacultyId = function (id) {
-            return /[0-9]+/.test(id);
+            var match = id.match(/[0-9]+/);
+            return match && match[0] === id;
+        };
+
+        this.isValidIncome = function (income) {
+            var match = income.match(/[0-9]+\.?[0-9]*/);
+            return match && match[0] === income;
         };
     });
