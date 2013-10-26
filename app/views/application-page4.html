@@ -1,5 +1,5 @@
 <div id="applicationContainer">
-    <form class="application">
+    <form class="application" ng-controller="ApplicationFormController" ng-submit="sendApplication()">
         <h2 class="form-heading">Попълване на формуляр</h2>
         <input type="text" class="input-block-level registerInput" placeholder="Курс" ng-model="student.schoolYear"/>
         <i class="icon-remove feedbackIcon" ng-show="!isValidSchoolYear()"></i>
@@ -15,8 +15,6 @@
                 <input type="checkbox"> Целогодишна стипендия
             </label>
         </div>
-        <a class="btn btn-inverse" href="#application-page4">Продължи</a>
+        <button class="btn btn-inverse" type="submit">Запази</button>
     </form>
-    <div class="btn-toolbar">
-</div>
 </div>

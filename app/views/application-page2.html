@@ -16,7 +16,7 @@
         <input type="text" class="input-block-level registerInput" placeholder="Доход за последните 6 месецa" ng-model="student.firstParentIncome"/>
         <i class="icon-remove feedbackIcon" ng-show="!isValidFirstParentIncome()"></i>
         <i class="icon-ok feedbackIcon" ng-show="isValidFirstParentIncome()"></i>
-        <a class="btn btn-inverse" href="#application-page3">Продължи</a>
+        <a class="btn btn-inverse" ng-click="next(3)">Продължи</a>
     </form>
     <div class="btn-toolbar">
 </div>

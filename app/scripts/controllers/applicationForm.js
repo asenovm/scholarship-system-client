@@ -1,9 +1,15 @@
 'use strict';
 
 angular.module('scholarshipSystemClientApp')
-  .controller('ApplicationFormController', ['$scope', '$location', 'ValidationService', function ($scope, $location, validationService) {
+  .controller('ApplicationFormController', ['$scope', '$location', 'ValidationService', 'HttpService', function ($scope, $location, validationService, httpService) {
 
-    $scope.student = {};
+    $scope.student = {
+        'firstName': 'Martin',
+        'lastName': 'Asenov',
+        'surname': 'Asenov',
+        'facultyId': '80457',
+        'email': 'asenov.m@gmail.com'
+    };
 
     function isValidName(name) {
         return name && validationService.isValidName(name);
@@ -60,6 +66,16 @@ angular.module('scholarshipSystemClientApp')
 
     $scope.isValidGrade = function () {
         return validationService.isValidGrade($scope.student.grade);
-    }
+    };
+
+    $scope.next = function (page) {
+        httpService.addApplicationData($scope.student);  
+        $location.path('/application-page' + page);
+    };
+
+    $scope.sendApplication = function () { 
+        httpService.addApplicationData($scope.student);
+        httpService.sendApplication();
+    };
 
   }]);
