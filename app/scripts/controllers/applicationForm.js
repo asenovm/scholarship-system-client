@@ -47,15 +47,13 @@ angular.module('scholarshipSystemClientApp')
             httpService.sendApplication().then(function (response) {
                 $location.path('/profile');
             }, function (response) {
-                var $warningBox = $('.warning-application');
-                $warningBox.append('Въвели сте невалидни данни. Формата не е запазена.');
-                $warningBox.show();
+                showWarning();
             });
         }
     };
 
     function showWarning() {
-        $('span.content').text('Не сте попълнили коректно всички полета');
+        $('span.content').text('Формата не е запазена');
         $('.warning-application').show();
     }
 
