@@ -5,6 +5,8 @@
 form.register, form.application {
     width: 500px;
     max-width: 500px;
+    position: relative;
+    top: 20px;
 }
 
 .registerInput {

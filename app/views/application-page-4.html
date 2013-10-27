@@ -2,7 +2,7 @@
     <div class="alert alert-error warning-application">
       <strong>Грешка!</strong>
     </div>`
-    <form class="application" ng-controller="ApplicationFormController" ng-submit="sendApplication(isValidSchoolYear() && isValidGrade())">
+    <form class="application grey-container" ng-controller="ApplicationFormController" ng-submit="sendApplication(isValidSchoolYear() && isValidGrade())">
         <h2 class="form-heading">Попълване на формуляр</h2>
         <input type="text" class="input-block-level registerInput" placeholder="Курс" ng-model="application.schoolYear"/>
         <i class="icon-remove feedbackIcon" ng-show="!isValidSchoolYear()"></i>
