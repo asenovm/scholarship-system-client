@@ -1,14 +1,16 @@
 'use strict';
 
 angular.module('scholarshipSystemClientApp')
-  .controller('ApplicationFormController', ['$scope', '$location', 'ValidationService', 'HttpService', function ($scope, $location, validationService, httpService) {
+  .controller('ApplicationFormController', ['$scope', '$location', 'ValidationService', 'HttpService', 'UserService', function ($scope, $location, validationService, httpService, userService) {
+
+    var user = userService.getActiveUser();
 
     $scope.application = {
-        'firstName': 'Martin',
-        'lastName': 'Asenov',
-        'surname': 'Asenov',
-        'facultyId': '80457',
-        'email': 'asenov.m@gmail.com'
+        'firstName': user.firstName,
+        'lastName': user.surname,
+        'surname': user.lastName,
+        'facultyId': user.facultyId,
+        'email': user.email
     };
 
 

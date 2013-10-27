@@ -1,15 +1,15 @@
 <div id="applicationContainer">
     <form class="application">
         <h2 class="form-heading">Попълване на формуляр</h2>
-        <input type="text" class="input-block-level registerInput" placeholder="Име" value="Мартин" required/>
+        <input type="text" class="input-block-level registerInput" placeholder="Име" ng-model="application.firstName" readonly/>
         <i class="icon-ok feedbackIcon"></i>
-        <input type="text" class="input-block-level registerInput" placeholder="Презиме" value="Асенов" required/>
+        <input type="text" class="input-block-level registerInput" placeholder="Презиме" ng-model="application.surname" readonly/>
         <i class="icon-ok feedbackIcon"></i>
-        <input type="text" class="input-block-level registerInput" placeholder="Фамилия" value="Асенов" required/>
+        <input type="text" class="input-block-level registerInput" placeholder="Фамилия" ng-model="application.lastName" readonly/>
         <i class="icon-ok feedbackIcon"></i>
-        <input type="text" class="input-block-level registerInput" placeholder="Факултетен номер" value="80457" required/>
+        <input type="text" class="input-block-level registerInput" placeholder="Факултетен номер" ng-model="application.facultyId" readonly/>
         <i class="icon-ok feedbackIcon"></i>
-        <input type="text" class="input-block-level registerInput" placeholder="e-mail адрес" value="asenov.m@gmail.com" required/>
+        <input type="text" class="input-block-level registerInput" placeholder="e-mail адрес" ng-model="application.email" readonly/>
         <i class="icon-ok feedbackIcon"></i>
         <a class="btn btn-inverse" ng-click="next(2, true)">Продължи</a>
     </form>
