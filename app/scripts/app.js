@@ -17,16 +17,12 @@ angular.module('scholarshipSystemClientApp', [
         templateUrl: 'views/register.html',
         controller: 'RegisterController'
       }).
-      when('/profile', {
-        templateUrl: 'views/profile.html',
+      when('/student/profile', {
+        templateUrl: 'views/student-profile.html',
         controller: 'UserProfileController'
       }).
-      when('/board', {
-        templateUrl: 'views/board.html',
-        controller: 'BoardController'
-      }).
-      when('/admin-home', {
-        templateUrl: 'views/admin-home.html',
+      when('/admin/profile', {
+        templateUrl: 'views/admin-profile.html',
         controller: 'AdminProfileController'
       }).
       when('/application', {
