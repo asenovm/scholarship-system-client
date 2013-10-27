@@ -1,18 +1,24 @@
 <div id="homeContainer">
-    <h3>Подадени до момента формуляри</h3>
-    <table class="table table-bordered">
-        <tr>
-            <th>Име на формуляр</th>
-            <th>Статус</th>
-            <th>Линк</th>
-            <th>Изтрий</th>
-        </tr>
-        <tr>
-            <td>Формуляр за стипендия за зимен семестър</td>
-            <td>Потвърден</td>
-            <td><a href="#download">Свали</a></td>
-            <td><a href="#delete">Изтрий</a></td>
-        </tr>
-    </table>
-    <a class="btn btn-inverse" href="#application">Подай нов формуляр</button>
+    <div ng-show="{{ applications.length }} === 0">
+        {{ applications.length }}
+        <h3>До момента нямате подадени формуляри.</h3>
+        <a class="btn btn-inverse" href="#application">Подай нов формуляр</a>
+    </div>
+    <div ng-hide="{{ applications.length }} === 0">
+        <h3>Подадени до момента формуляри</h3>
+        <table class="table table-bordered">
+            <tr>
+                <th>Име на формуляр</th>
+                <th>Статус</th>
+                <th>Линк</th>
+                <th>Изтрий</th>
+            </tr>
+            <tr ng-repeat="application in applications">
+                <td>Формуляр за стипендия за зимен семестър</td>
+                <td>{{ application.status }}</td>
+                <td><a href="#">Свали</a></td>
+                <td><a ng-click="deleteApplication(application)">Изтрий</a></td>
+            </tr>
+        </table>
+    </div>
 </div>

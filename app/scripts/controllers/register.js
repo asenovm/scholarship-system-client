@@ -11,7 +11,13 @@ angular.module('scholarshipSystemClientApp')
 
     $scope.register = function () {
         $scope.student.facultyName = $('.selectpicker').val();
-        httpService.register($scope.student);
+        httpService.register($scope.student).then(function (response) {
+            $location.path('/');
+        }, function (response) {
+            var $warningBox = $('.warning-application');
+            $warningBox.append('Регистрацията е неуспешна. Моля опитайте по-късно.');
+            $warningBox.show();
+        });
     };
 
     $scope.isValidName = function (nameType) {

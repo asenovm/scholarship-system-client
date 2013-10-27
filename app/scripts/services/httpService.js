@@ -3,7 +3,6 @@
 
 angular.module('scholarshipSystemClientApp')
     .service('HttpService', ['$http', function ($http) {
-
         var SERVER_URL = 'http://192.168.0.103:3000',
             LOGIN_URL = SERVER_URL + '/login',
             REGISTER_URL = SERVER_URL + '/register',
@@ -11,28 +10,50 @@ angular.module('scholarshipSystemClientApp')
             applicationData = {};
 
         this.register = function (student) {
-            console.log('register is called with ');
-            console.dir(student);
-            $http.post(REGISTER_URL, student)
-                .success(function (response) {
-                    console.log('success');
-                    console.dir(response);
-                }).error(function (response) {
-                    console.log('error');
-                    console.dir(response);
-                });
+            return $http({
+                url: REGISTER_URL,
+                method: 'POST',
+                data: student,
+                withCredentials: true
+            });
         };
 
         this.login = function (credentials) {
-            return $http.post(LOGIN_URL, JSON.stringify(credentials));
+            return $http({
+                url: LOGIN_URL,
+                method: 'POST',
+                data: credentials
+            });
         };
 
         this.sendApplication = function () {
-            applicationData = _.omit(applicationData,'facultyId', 'firstName', 'lastName', 'surname');
-            return $http.post(APPLICATION_URL, JSON.stringify(applicationData));
+            return $http({
+                url: APPLICATION_URL,
+                method: 'POST',
+                data: _.omit(applicationData,'facultyId', 'firstName', 'lastName', 'surname'),
+                withCredentials: true
+            });
+        };
+
+        this.deleteApplication = function (application) {
+            return $http({
+                url: APPLICATION_URL,
+                method: 'DELETE',
+                data: {email : application.email},
+                withCredentials: true
+            });
+        };
+
+        this.getApplicationsForUser = function (user) {
+            return $http({
+                url: APPLICATION_URL + '?email=' + user.email,
+                method: 'GET',
+                withCredentials: true
+            });
         };
 
         this.addApplicationData = function (data) {
             $.extend(applicationData, data);
-        }
+        };
+
     }]);

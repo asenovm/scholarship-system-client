@@ -37,11 +37,13 @@ angular.module('scholarshipSystemClientApp')
         }
     };
 
-    function showWarning() {
-        var $warningBox = $('.warning-application');
-        $warningBox.append('Не сте попълнили коректно всички полета');
-        $warningBox.show();
-    }
+    $scope.deleteApplication = function (application) {
+        httpService.deleteApplication(application).then(function (response) {
+            console.log('deleted');   
+        }, function (response) {
+            console.log('not deleted');
+        });
+    };
 
     $scope.sendApplication = function (isFormValid) { 
         if(!isFormValid) {
@@ -57,5 +59,12 @@ angular.module('scholarshipSystemClientApp')
             });
         }
     };
+
+    function showWarning() {
+        var $warningBox = $('.warning-application');
+        $warningBox.append('Не сте попълнили коректно всички полета');
+        $warningBox.show();
+    }
+
 
   }]);
