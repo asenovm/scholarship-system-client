@@ -17,10 +17,15 @@ angular.module('scholarshipSystemClientApp')
 
     $scope.isValidName = function (nameType) {
         return validationService.isValidName($scope.application[nameType]);
-    }
+    };
+
+    $scope.isValidCompany = function (companyType) {
+        return validationService.isValidCompany($scope.application[companyType]);
+    };
+
     $scope.isValidIncome = function (incomeType) {
         return validationService.isValidIncome($scope.application[incomeType]);
-    }
+    };
 
     $scope.isValidSchoolYear = function () {
         return validationService.isValidSchoolYear($scope.application.schoolYear);

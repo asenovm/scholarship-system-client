@@ -20,6 +20,15 @@ angular.module('scholarshipSystemClientApp')
             return match && match[0] === name;
         };
 
+        this.isValidCompany = function (name) {
+            if(!name) {
+                return false;
+            }
+
+            var match = name.match(/[АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя\sa-zA-Z0-9]+/);
+            return match && match[0] === name;
+        }
+
         this.isValidMajor = function (major) {
             if(!major) {
                 return false;

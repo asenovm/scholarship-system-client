@@ -12,11 +12,11 @@ angular.module('scholarshipSystemClientApp')
             $scope.applications = response.data;
             $scope.applications.map(function (item) {
                 if(item.status === 'pending') {
-                    item.status = 'Одобрен'; 
-                } else if(item.status === 'approved') {
-                    item.status = 'Класиран';
-                } else {
                     item.status = 'Чакащ одобрение';
+                } else if(item.status === 'approved') {
+                    item.status = 'Одобрен'; 
+                } else {
+                    item.status = 'Класиран';
                 }
             });
         });

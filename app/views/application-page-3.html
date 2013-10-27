@@ -14,12 +14,12 @@
         <i class="icon-remove feedbackIcon" ng-show="!isValidName('secondParentLastName')"></i>
         <i class="icon-ok feedbackIcon" ng-show="isValidName('secondParentLastName')"></i>
         <input type="text" class="input-block-level registerInput" placeholder="Компания на втори родител/настойник" ng-model="application.secondParentCompany"/>
-        <i class="icon-remove feedbackIcon" ng-show="!isValidName('secondParentCompany')"></i>
-        <i class="icon-ok feedbackIcon" ng-show="isValidName('secondParentCompany')"></i>
+        <i class="icon-remove feedbackIcon" ng-show="!isValidCompany('secondParentCompany')"></i>
+        <i class="icon-ok feedbackIcon" ng-show="isValidCompany('secondParentCompany')"></i>
         <input type="text" class="input-block-level registerInput" placeholder="Доход за последните 6 месецa" ng-model="application.secondParentIncome"/>
         <i class="icon-remove feedbackIcon" ng-show="!isValidIncome('secondParentIncome')"></i>
         <i class="icon-ok feedbackIcon" ng-show="isValidIncome('secondParentIncome')"></i>
-        <a class="btn btn-inverse" ng-click="next(4, isValidName('secondParentFirstName') && isValidName('secondParentSurname') && isValidName('secondParentLastName') && isValidName('secondParentCompany') && isValidIncome('secondParentIncome'))">Продължи</a>
+        <a class="btn btn-inverse" ng-click="next(4, isValidName('secondParentFirstName') && isValidName('secondParentSurname') && isValidName('secondParentLastName') && isValidCompany('secondParentCompany') && isValidIncome('secondParentIncome'))">Продължи</a>
     </form>
     <div class="progress progress-success progress-striped applicationProgress">
         <div class="progressLabel">3/4</div>
