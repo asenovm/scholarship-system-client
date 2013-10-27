@@ -24,7 +24,7 @@ angular.module('scholarshipSystemClientApp')
     }
 
     $scope.isValidMajor = function () {
-        return validationService.isValidMajor($scope.student['major']);
+        return validationService.isValidMajor($scope.student.major);
     };
 
     $scope.isValidFacultyId = function () {
