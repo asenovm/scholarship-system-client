@@ -33,7 +33,7 @@ angular.module('scholarshipSystemClientApp')
     $scope.next = function (page, isFormValid) {
         if(isFormValid) {
             httpService.addApplicationData($scope.application);  
-            $location.path('/application-page-' + page);
+            $location.path('/application/' + page);
         } else {
             showWarning();
         }

@@ -33,15 +33,15 @@ angular.module('scholarshipSystemClientApp', [
         templateUrl: 'views/application.html',
         controller: 'ApplicationFormController'
       }).
-      when('/application-page-2', {
+      when('/application/2', {
         templateUrl: 'views/application-page-2.html',
         controller: 'ApplicationFormController'
       }).
-      when('/application-page-3', {
+      when('/application/3', {
         templateUrl: 'views/application-page-3.html',
         controller: 'ApplicationFormController'
       }).
-      when('/application-page-4', {
+      when('/application/4', {
         templateUrl: 'views/application-page-4.html',
         controller: 'ApplicationFormController'
       })
