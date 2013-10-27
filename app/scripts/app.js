@@ -17,8 +17,8 @@ angular.module('scholarshipSystemClientApp', [
         templateUrl: 'views/register.html',
         controller: 'RegisterController'
       }).
-      when('/home', {
-        templateUrl: 'views/home.html',
+      when('/profile', {
+        templateUrl: 'views/profile.html',
         controller: 'UserProfileController'
       }).
       when('/board', {

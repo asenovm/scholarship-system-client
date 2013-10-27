@@ -35,9 +35,8 @@ angular.module('scholarshipSystemClientApp')
 
         this.deleteApplication = function (application) {
             return $http({
-                url: APPLICATION_URL,
-                method: 'DELETE',
-                data: {email : application.email},
+                url: APPLICATION_URL + '/' + application.email,
+                method: 'DELETE'
             });
         };
 

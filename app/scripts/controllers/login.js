@@ -6,7 +6,7 @@ angular.module('scholarshipSystemClientApp')
     $scope.login = function () {
         httpService.login($scope.credentials).then(function (response) {
             userService.storeUserProfile(response.data);
-            $location.path('/home');
+            $location.path('/profile');
         }, function (response) {
             var $warningBox = $('.warning');
             $warningBox.append('Въвели сте невалиден имейл или парола.');

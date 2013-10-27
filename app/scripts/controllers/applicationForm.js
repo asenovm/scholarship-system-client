@@ -51,7 +51,7 @@ angular.module('scholarshipSystemClientApp')
         } else {
             httpService.addApplicationData($scope.application);
             httpService.sendApplication().then(function (response) {
-                $location.path('/home');
+                $location.path('/profile');
             }, function (response) {
                 var $warningBox = $('.warning-application');
                 $warningBox.append('Въвели сте невалидни данни. Формата не е запазена.');
