@@ -1,4 +1,7 @@
 <div id="applicationContainer">
+    <div class="alert alert-error warning-application">
+      <strong>Грешка!</strong>
+    </div>`
     <form class="application grey-container">
         <h2 class="form-heading">Попълване на формуляр</h2>
         <input type="text" class="input-block-level registerInput" placeholder="Име" ng-model="application.firstName" readonly/>
@@ -8,6 +11,8 @@
         <input type="text" class="input-block-level registerInput" placeholder="Фамилия" ng-model="application.lastName" readonly/>
         <i class="icon-ok feedbackIcon"></i>
         <input type="text" class="input-block-level registerInput" placeholder="Факултетен номер" ng-model="application.facultyId" readonly/>
+        <i class="icon-ok feedbackIcon"></i>
+        <input type="text" class="input-block-level registerInput" placeholder="Специалност" ng-model="application.major" readonly/>
         <i class="icon-ok feedbackIcon"></i>
         <input type="text" class="input-block-level registerInput" placeholder="e-mail адрес" ng-model="application.email" readonly/>
         <i class="icon-ok feedbackIcon"></i>

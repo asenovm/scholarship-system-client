@@ -1,4 +1,5 @@
-<form style="max-width:100%;" class="grey-container">
+<h5 ng-show="pendingApplications.length == 0" class="text-center well muted"><strong>Браво!</strong> Няма молби, които да чакат да бъдат одобрени</h5>
+<div style="max-width: 100%;" class="grey-container" ng-hide="pendingApplications.length == 0">
     <h3 class="text-center text-warning">Списък с всички неодобрени молби</h3>
     <table id="board" class="table table-striped table-bordered">
             <tr>
@@ -17,4 +18,4 @@
                 <td>{{ application.grade }}</td>
                 <td><a class="btn btn-inverse" ng-click="approveApplication(application)">Одобри</a></td>
             </tr>
-</form>
+</div>

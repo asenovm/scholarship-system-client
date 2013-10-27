@@ -10,7 +10,8 @@ angular.module('scholarshipSystemClientApp')
         'lastName': user.surname,
         'surname': user.lastName,
         'facultyId': user.facultyId,
-        'email': user.email
+        'email': user.email,
+        'major': user.major
     };
 
 
@@ -18,8 +19,7 @@ angular.module('scholarshipSystemClientApp')
         return validationService.isValidName($scope.application[nameType]);
     }
     $scope.isValidIncome = function (incomeType) {
-        var income = $scope.application[incomeType];
-        return income && validationService.isValidIncome(income);
+        return validationService.isValidIncome($scope.application[incomeType]);
     }
 
     $scope.isValidSchoolYear = function () {
@@ -37,14 +37,6 @@ angular.module('scholarshipSystemClientApp')
         } else {
             showWarning();
         }
-    };
-
-    $scope.deleteApplication = function (application) {
-        httpService.deleteApplication(application).then(function (response) {
-            console.log('deleted');   
-        }, function (response) {
-            console.log('not deleted');
-        });
     };
 
     $scope.sendApplication = function (isFormValid) { 

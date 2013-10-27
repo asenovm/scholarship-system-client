@@ -14,7 +14,7 @@ angular.module('scholarshipSystemClientApp')
             return $http({
                 url: REGISTER_URL,
                 method: 'POST',
-                data: student,
+                data: student
             });
         };
 
@@ -30,7 +30,7 @@ angular.module('scholarshipSystemClientApp')
             return $http({
                 url: APPLICATION_URL,
                 method: 'POST',
-                data: _.omit(applicationData,'facultyId', 'firstName', 'lastName', 'surname'),
+                data: _.omit(applicationData,'facultyId', 'firstName', 'lastName', 'surname')
             });
         };
 
@@ -44,12 +44,11 @@ angular.module('scholarshipSystemClientApp')
         this.getApplicationsForUser = function (user) {
             return $http({
                 url: APPLICATION_URL + '?email=' + user.email,
-                method: 'GET',
+                method: 'GET'
             });
         };
 
         this.getPendingApplications = function () {
-            console.log('get pedning applications!');
             return $http({
                 url: ADMIN_APPLICATIONS_URL,
                 method: 'GET'

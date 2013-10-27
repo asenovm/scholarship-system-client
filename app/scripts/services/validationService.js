@@ -33,8 +33,10 @@ angular.module('scholarshipSystemClientApp')
             if(!income) {
                 return false;
             }
-
+            console.log(income);
+            console.log(typeof income);
             var match = income.match(/[0-9]+\.?[0-9]*/);
+            console.log(match[0]);
             return match && match[0] === income;
         };
 
