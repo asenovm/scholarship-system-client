@@ -5,7 +5,9 @@ angular.module('scholarshipSystemClientApp', [
   'ngResource',
   'ngSanitize'
 ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $httpProvider) {
+    $httpProvider.defaults.withCredentials = true;
+
     $routeProvider
       .when('/', {
         templateUrl: 'views/login.html',

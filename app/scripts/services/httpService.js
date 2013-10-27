@@ -14,7 +14,6 @@ angular.module('scholarshipSystemClientApp')
                 url: REGISTER_URL,
                 method: 'POST',
                 data: student,
-                withCredentials: true
             });
         };
 
@@ -31,7 +30,6 @@ angular.module('scholarshipSystemClientApp')
                 url: APPLICATION_URL,
                 method: 'POST',
                 data: _.omit(applicationData,'facultyId', 'firstName', 'lastName', 'surname'),
-                withCredentials: true
             });
         };
 
@@ -40,7 +38,6 @@ angular.module('scholarshipSystemClientApp')
                 url: APPLICATION_URL,
                 method: 'DELETE',
                 data: {email : application.email},
-                withCredentials: true
             });
         };
 
@@ -48,7 +45,6 @@ angular.module('scholarshipSystemClientApp')
             return $http({
                 url: APPLICATION_URL + '?email=' + user.email,
                 method: 'GET',
-                withCredentials: true
             });
         };
 
