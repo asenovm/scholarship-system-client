@@ -1,10 +1,9 @@
 <div id="homeContainer">
-    <div ng-show="{{ applications.length }} === 0">
-        {{ applications.length }}
+    <div ng-show="applications.length == 0">
         <h3>До момента нямате подадени формуляри.</h3>
         <a class="btn btn-inverse" href="#application">Подай нов формуляр</a>
     </div>
-    <div ng-hide="{{ applications.length }} === 0">
+    <div ng-hide="applications.length == 0">
         <h3>Подадени до момента формуляри</h3>
         <table class="table table-bordered">
             <tr>
