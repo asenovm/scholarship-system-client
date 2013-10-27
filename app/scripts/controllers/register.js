@@ -14,9 +14,8 @@ angular.module('scholarshipSystemClientApp')
         httpService.register($scope.student).then(function (response) {
             $location.path('/');
         }, function (response) {
-            var $warningBox = $('.warning-application');
-            $warningBox.append('Регистрацията е неуспешна. Моля опитайте по-късно.');
-            $warningBox.show();
+            $('span.content').text('Регистрацията е неуспешна. Моля опитайте по-късно.');
+            $('.warning-application').show();
         });
     };
 

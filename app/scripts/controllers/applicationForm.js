@@ -55,9 +55,8 @@ angular.module('scholarshipSystemClientApp')
     };
 
     function showWarning() {
-        var $warningBox = $('.warning-application');
-        $warningBox.append('Не сте попълнили коректно всички полета');
-        $warningBox.show();
+        $('span.content').append('Не сте попълнили коректно всички полета');
+        $('.warning-application').show();
     }
 
 

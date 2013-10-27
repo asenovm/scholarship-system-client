@@ -12,9 +12,8 @@ angular.module('scholarshipSystemClientApp')
                 $location.path('/student/profile');
             }
         }, function (response) {
-            var $warningBox = $('.warning');
-            $warningBox.append('Въвели сте невалиден имейл или парола.');
-            $warningBox.show();
+            $('span.content').text('Въвели сте невалиден имейл или парола.');
+            $('.warning').show();
         });
     };
   
