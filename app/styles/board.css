@@ -2,3 +2,7 @@
         background-color: #d3d2b6;
         font-style: italic;
 }
+
+#board th {
+    background-color: #e5f2d9;
+}
