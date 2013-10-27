@@ -5,19 +5,14 @@ angular.module('scholarshipSystemClientApp')
 
         $scope.pendingApplications = [];
 
-        httpService.getPendingApplications().then(function (response) {
-            $scope.pendingApplications = response.data;
-            console.dir(response.data);
-        }, function (response) {
-            console.dir(response);
-            console.log('err');
-        });
+        function getPendingApplications() {
+            httpService.getPendingApplications().then(function (response) {
+                $scope.pendingApplications = response.data;
+            });
+        }
 
         $scope.approveApplication = function (application) {
-            httpService.approveApplication(application).then(function (response) {
-                console.log('ok!');
-                console.dir(response);
-            }, function (response) {
+            httpService.approveApplication(application).then(getPendingApplications, function (response) {
                 console.log('err');
                 console.dir(response);
             });;
