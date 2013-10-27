@@ -12,3 +12,12 @@
     right: 10px;
     font-size: 10px;
 }
+
+.warning-application {
+    width: 510px;
+    position: absolute;
+    left: 50%;
+    top: 70px;
+    margin-left: -280px;
+    display: none;
+}

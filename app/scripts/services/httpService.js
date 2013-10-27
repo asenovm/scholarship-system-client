@@ -29,11 +29,7 @@ angular.module('scholarshipSystemClientApp')
 
         this.sendApplication = function () {
             applicationData = _.omit(applicationData,'facultyId', 'firstName', 'lastName', 'surname');
-            $http.post(APPLICATION_URL, JSON.stringify(applicationData)).then(function (response) {
-                console.log('success');
-            }, function (response) {
-                console.log('error');
-            });
+            return $http.post(APPLICATION_URL, JSON.stringify(applicationData));
         };
 
         this.addApplicationData = function (data) {

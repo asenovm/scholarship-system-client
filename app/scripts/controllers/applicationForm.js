@@ -35,7 +35,13 @@ angular.module('scholarshipSystemClientApp')
 
     $scope.sendApplication = function () { 
         httpService.addApplicationData($scope.application);
-        httpService.sendApplication();
+        httpService.sendApplication().then(function (response) {
+            $location.path('/home');
+        }, function (response) {
+            var $warningBox = $('.warning-application');
+            $warningBox.append('Въвели сте невалидни данни. Формата не е изпратена.');
+            $warningBox.show();
+        });
     };
 
   }]);

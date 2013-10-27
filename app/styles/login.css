@@ -32,7 +32,7 @@ form .form-heading, form .checkbox {
     width: 320px;
     position: absolute;
     left: 50%;
-    top: 10%;
+    top: 70px;
     margin-left: -180px;
     display:none;
 }
