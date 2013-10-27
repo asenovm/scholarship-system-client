@@ -25,7 +25,7 @@ angular.module('scholarshipSystemClientApp', [
         templateUrl: 'views/admin-profile.html',
         controller: 'AdminProfileController'
       }).
-      when('/application', {
+      when('/application/1', {
         templateUrl: 'views/application.html',
         controller: 'ApplicationFormController'
       }).
