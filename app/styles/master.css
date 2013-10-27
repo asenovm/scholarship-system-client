@@ -1,6 +1,0 @@
-*{cursor:default;}
-input,tr{cursor:text;}
-select{position:absolute;}
-input[type="checkbox"],input[type="radiobox"],button,a,label,thead tr th{cursor:pointer;}
-.tablesorter tbody>tr>td[contenteditable=true]:focus{outline:#08F 1px solid;background:#DDD;resize:none;}
-td.no-edit,span.no-edit{background-color:#EEE;}

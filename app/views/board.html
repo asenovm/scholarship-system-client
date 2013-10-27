@@ -1,63 +1,20 @@
-<link rel="stylesheet" href="bower_components/jquery.tablesorter/css/theme.bootstrap.css"/>
-<script src="bower_components/jquery.tablesorter/js/jquery.tablesorter.min.js"></script>
-<script src="bower_components/jquery.tablesorter/js/jquery.tablesorter.widgets.min.js"></script>
-<script src="bower_components/jquery.tablesorter/js/jquery.metadata.js"></script>
-<script src="bower_components/jquery.tablesorter/js/widgets/widget-editable.js"></script>
 <form style="max-width:100%;">
-<h2 class="text-center">Административна конзола</h2>
-<table id="board" class="tablesorter table table-striped table-bordered table-hover" cellspacing="1">
-<thead>
-<tr>
-<th>Факултетен номер</th>
-<th>Факултет</th>
-<th>Оценка</th>
-<th>Одобрен</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1001</td>
-<td><select class="selectpicker">
-<option>Факултет по математика и информатика</option>
-<option>Факултет по физика</option>
-<option>Факултет по физика и фармация</option>
-<option>Биологически факултет</option>
-<option>Геолого-географски факултет</option>
-<option>Юридически факултет</option>
-<option>Исторически факултет</option>
-<option>Стопански факултет</option>
-<option>Философски факултет</option>
-</select></td>
-<td>6.00</td>
-<td><input type="checkbox"></td>
-</tr>
-<tr>
-<td>101</td>
-<td>Факултет по микрозаплати</td>
-<td>4.30</td>
-<td><input type="checkbox"></td>
-</tr>
-<tr>
-<td>10001</td>
-<td>Факултет по геодезия</td>
-<td>3.53</td>
-<td><input type="checkbox"></td>
-</tr>
-</tbody>
-</table>
-<script>
-$("#board").tablesorter({
-theme:"bootstrap",
-headers:{2:{sorter:"list"},3:{sorter:"checkbox"}},
-sortList:[[0,0]],
-widthFixed:true,
-showProcessing:true,
-headerTemplate:"{content}{icon}",
-widgets: ['editable'],
-widgetOptions:{
-editable_columns:[0,1,2],
-editable_enterToAccept:true,
-editable_autoResort:false,
-editable_noEdit:'no-edit'}});
-</script>
+    <h2 class="text-center">Административна конзола</h2>
+    <table id="board" class="table table-striped table-bordered">
+            <tr>
+                <th>Име</th>
+                <th>Факултет</th>
+                <th>Специалност</th>
+                <th>Факултетен номер</th>
+                <th>Оценка</th>
+                <th>Статус</th>
+            </tr>
+            <tr ng-repeat="application in pendingApplications">
+                <td>{{ application.name }}</td>
+                <td>{{ application.facultyName }}</td>
+                <td>{{ application.major }}</td>
+                <td>{{ application.facultyId }}</td>
+                <td>{{ application.grade }}</td>
+                <td><a class="btn btn-inverse" ng-click="approveApplication">Одобри</a></td>
+            </tr>
 </form>

@@ -1,8 +1,8 @@
 <div id="registerContainer">
     <div class="alert alert-error warning-application">
       <strong>Грешка!</strong>
-    </div>`
-    <form class="register" ng-submit="register()">
+    </div>
+    <form class="register container" ng-submit="register()">
         <h2 class="form-heading">Регистрация</h2>
         <input type="text" class="input-block-level registerInput" placeholder="Име" ng-model="student.firstName"/>
         <i class="icon-remove feedbackIcon" ng-show="!isValidName('firstName')"></i>
@@ -38,6 +38,4 @@
         </select>
         <button class="btn btn-inverse" type="submit">Регистрaция</button>
     </form>
-    <div class="btn-toolbar">
-</div>
 </div>

@@ -15,8 +15,8 @@
             <tr ng-repeat="application in applications">
                 <td>Формуляр за стипендия за зимен семестър</td>
                 <td>{{ application.status }}</td>
-                <td><a href="#">Свали</a></td>
-                <td><a ng-click="deleteApplication(application)">Изтрий</a></td>
+                <td><a class="btn btn-primary" href="#">Свали</a></td>
+                <td><a class="btn btn-warning" ng-click="deleteApplication(application)">Изтрий</a></td>
             </tr>
         </table>
     </div>
