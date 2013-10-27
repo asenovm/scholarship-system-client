@@ -1,4 +1,7 @@
 <div id="applicationContainer">
+    <div class="alert alert-error warning-application">
+      <strong>Грешка!</strong>
+    </div>`
     <form class="application">
         <h2 class="form-heading">Попълване на формуляр</h2>
         <input type="text" class="input-block-level registerInput" placeholder="Име на втори родител/настойник" ng-model="application.secondParentFirstName"/>
@@ -16,7 +19,7 @@
         <input type="text" class="input-block-level registerInput" placeholder="Доход за последните 6 месецa" ng-model="application.secondParentIncome"/>
         <i class="icon-remove feedbackIcon" ng-show="!isValidIncome('secondParentIncome')"></i>
         <i class="icon-ok feedbackIcon" ng-show="isValidIncome('secondParentIncome')"></i>
-        <a class="btn btn-inverse" ng-click="next(4)">Продължи</a>
+        <a class="btn btn-inverse" ng-click="next(4, isValidName('secondParentFirstName') && isValidName('secondParentSurname') && isValidName('secondParentLastName') && isValidName('secondParentCompany') && isValidIncome('secondParentIncome'))">Продължи</a>
     </form>
     <div class="progress progress-success progress-striped applicationProgress">
         <div class="progressLabel">3/4</div>

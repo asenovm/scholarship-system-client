@@ -28,20 +28,34 @@ angular.module('scholarshipSystemClientApp')
         return validationService.isValidGrade($scope.application.grade);
     };
 
-    $scope.next = function (page) {
-        httpService.addApplicationData($scope.application);  
-        $location.path('/application-page-' + page);
+    $scope.next = function (page, isFormValid) {
+        if(isFormValid) {
+            httpService.addApplicationData($scope.application);  
+            $location.path('/application-page-' + page);
+        } else {
+            showWarning();
+        }
     };
 
-    $scope.sendApplication = function () { 
-        httpService.addApplicationData($scope.application);
-        httpService.sendApplication().then(function (response) {
-            $location.path('/home');
-        }, function (response) {
-            var $warningBox = $('.warning-application');
-            $warningBox.append('Въвели сте невалидни данни. Формата не е изпратена.');
-            $warningBox.show();
-        });
+    function showWarning() {
+        var $warningBox = $('.warning-application');
+        $warningBox.append('Не сте попълнили коректно всички полета');
+        $warningBox.show();
+    }
+
+    $scope.sendApplication = function (isFormValid) { 
+        if(!isFormValid) {
+            showWarning();
+        } else {
+            httpService.addApplicationData($scope.application);
+            httpService.sendApplication().then(function (response) {
+                $location.path('/home');
+            }, function (response) {
+                var $warningBox = $('.warning-application');
+                $warningBox.append('Въвели сте невалидни данни. Формата не е запазена.');
+                $warningBox.show();
+            });
+        }
     };
 
   }]);
