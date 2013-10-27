@@ -53,7 +53,7 @@ angular.module('scholarshipSystemClientApp')
     };
 
     function showWarning() {
-        $('span.content').text('Формата не е запазена');
+        $('span.content').text(' Формата не е запазена.');
         $('.warning-application').show();
     }
 
