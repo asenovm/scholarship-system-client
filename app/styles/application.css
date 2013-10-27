@@ -1,6 +1,14 @@
 .applicationProgress {
     width: 560px;
     height: 15px;
-    margin: 0 auto;
-    margin-bottom: 30px;
+    position: absolute;
+    left: 50%;
+    margin-left: -280px;
+}
+
+.progressLabel {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 10px;
 }
