@@ -25,7 +25,7 @@ angular.module('scholarshipSystemClientApp')
                 return false;
             }
 
-            var match = major.match(/[АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя ]+/);
+            var match = major.match(/[АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя\s]+/);
             return match && match[0] === major;
         };
 
