@@ -45,7 +45,7 @@ angular.module('scholarshipSystemClientApp')
         } else {
             httpService.addApplicationData($scope.application);
             httpService.sendApplication().then(function (response) {
-                $location.path('/profile');
+                $location.path('/student/profile');
             }, function (response) {
                 showWarning();
             });
