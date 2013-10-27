@@ -7,7 +7,7 @@ angular.module('scholarshipSystemClientApp')
             LOGIN_URL = SERVER_URL + '/login',
             REGISTER_URL = SERVER_URL + '/register',
             APPLICATION_URL = SERVER_URL + '/application',
-            PENDING_APPLICATIONS_URL = SERVER_URL + '/admin/applications',
+            ADMIN_APPLICATIONS_URL = SERVER_URL + '/admin/applications',
             applicationData = {};
 
         this.register = function (student) {
@@ -49,9 +49,19 @@ angular.module('scholarshipSystemClientApp')
         };
 
         this.getPendingApplications = function () {
+            console.log('get pedning applications!');
             return $http({
-                url: PENDING_APPLICATIONS_URL,
+                url: ADMIN_APPLICATIONS_URL,
                 method: 'GET'
+            });
+        };
+
+        this.approveApplication = function (application) {
+            console.dir(application);
+            return $http({
+                url: ADMIN_APPLICATIONS_URL,
+                method: 'PUT',
+                data: {email: application.email}
             });
         };
 
