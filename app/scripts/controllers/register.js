@@ -23,6 +23,10 @@ angular.module('scholarshipSystemClientApp')
         return validationService.isValidName($scope.student[nameType]);
     }
 
+    $scope.isValidMajor = function () {
+        return validationService.isValidMajor($scope.student['major']);
+    };
+
     $scope.isValidFacultyId = function () {
         return validationService.isValidFacultyId($scope.student.facultyId);
     };

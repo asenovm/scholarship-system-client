@@ -20,6 +20,15 @@ angular.module('scholarshipSystemClientApp')
             return match && match[0] === name;
         };
 
+        this.isValidMajor = function (major) {
+            if(!major) {
+                return false;
+            }
+
+            var match = name.match(/[АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя ]+/);
+            return match && match[0] === major;
+        };
+
         this.isValidFacultyId = function (id) {
             if(!id) {
                 return false;
