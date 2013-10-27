@@ -8,7 +8,7 @@ angular.module('scholarshipSystemClientApp')
         };
 
         this.isValidPassword = function (password) {
-            return password && password.length >= 8 && password.search(/[A-Z0-9]/) >= 0 && password.search(/\d/) >= 0;
+            return password && password.length >= 8 && password.search(/[A-Z]/) >= 0 && password.search(/\d/) >= 0;
         };
 
         this.isValidName = function (name) {
@@ -33,10 +33,7 @@ angular.module('scholarshipSystemClientApp')
             if(!income) {
                 return false;
             }
-            console.log(income);
-            console.log(typeof income);
             var match = income.match(/[0-9]+\.?[0-9]*/);
-            console.log(match[0]);
             return match && match[0] === income;
         };
 
