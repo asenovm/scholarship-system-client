@@ -17,6 +17,8 @@ angular.module('scholarshipSystemClientApp')
         $scope.approveApplication = function (application) {
             httpService.approveApplication(application).then(function (response) {
                 getPendingApplications();
-            });;
+            }, function (response) {
+                getPendingApplications();
+            });
         };
     }]);

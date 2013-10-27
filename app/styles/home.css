@@ -12,6 +12,10 @@
     background-color: #e5f2d9;
 }
 
+#homeContainer tr {
+    background-color: #d3d2b6;
+}
+
 .home-container {
     width: 700px;
     max-width: 700px;
