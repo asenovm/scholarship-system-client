@@ -3,8 +3,7 @@ body {
 }
 
 .loginContainer {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    margin-top: 60px;
 }
 
 form {
@@ -28,3 +27,13 @@ form .form-heading, form .checkbox {
 .notRegistered {
     margin-top: 20px;
 }
+
+.warning {
+    width: 320px;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    margin-left: -180px;
+    display:none;
+}
+

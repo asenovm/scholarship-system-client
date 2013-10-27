@@ -24,13 +24,7 @@ angular.module('scholarshipSystemClientApp')
         };
 
         this.login = function (credentials) {
-            $http.post(LOGIN_URL, JSON.stringify(credentials)).then(function (response) {
-                console.log('success');
-                console.dir(response);
-            }, function(response) {
-                console.log('error');
-                console.dir(response);
-            });
+            return $http.post(LOGIN_URL, JSON.stringify(credentials));
         };
 
         this.sendApplication = function () {
